@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FATI WORLD 🌙💜</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+<div id="siteLock">
+
+    <div class="lock-box">
+
+        <h1>🔒 FATI WORLD</h1>
+
+        <p>Enter the secret password 💜</p>
+
+        <input 
+        type="password" 
+        id="sitePassword"
+        placeholder="Password">
+
+        <button onclick="unlockSite()">
+            Enter 🌙
+        </button>
+
+        <p id="lockError"></p>
+
+    </div>
+
+</div>
+
+<div class="stars"></div>
+<div class="nebula"></div>
+
+<div class="moon">
+🌙
+</div>
+
+
+
+
+
+<!-- INTRO -->
+
+<section id="intro" class="intro">
+
+<div class="cd">
+💿
+</div>
+
+
+<h1>
+FATI WORLD
+</h1>
+
+
+<p>
+Connecting to memories...
+</p>
+
+
+<div class="loading">
+<div id="bar"></div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- WEBSITE -->
+
+
+<main id="website" class="hidden">
+
+
+
+
+
+<!-- NAVIGATION -->
+
+
+<nav>
+
+<h2>
+🌙 FATI
+</h2>
+
+
+<div>
+
+<a href="#home">
+Home
+</a>
+
+
+<a href="#memories">
+Memories
+</a>
+
+
+<a href="#music">
+Music
+</a>
+
+
+<a href="#secret">
+Secret
+</a>
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+
+<!-- HERO -->
+
+
+<section id="home" class="hero">
+
+
+<h1 class="glitch">
+WELCOME TO FATI'S UNIVERSE
+</h1>
+
+
+<p>
+A small galaxy full of memories, laughs and moments 💜
+</p>
+
+
+<button onclick="scrollMemories()">
+Explore ✦
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- BIRTHDAY MESSAGE -->
+
+
+<section class="card">
+
+
+<h2>
+💌 Birthday Message
+</h2>
+
+
+<p id="typing">
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ABOUT HER -->
+
+
+<section class="card">
+
+
+<h2>
+⭐ About Fati
+</h2>
+
+
+<div class="info">
+
+
+<div>
+🌙
+<br>
+Dreamer
+</div>
+
+
+<div>
+🎸
+<br>
+Music lover
+</div>
+
+
+<div>
+💜
+<br>
+Amazing friend
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- MEMORIES -->
+
+
+<section id="memories" class="card">
+
+
+<h2>
+📸 Memory Archive
+</h2>
+
+
+<div class="gallery">
+
+
+<img src="images/Fati1.jpg">
+
+<img src="images/Fati2.jpg">
+
+<img src="images/Fati3.jpg">
+
+<img src="images/Fati4.jpg">
+
+<img src="images/Fati5.jpg">
+
+<img src="images/Fati6.jpg">
+
+<img src="images/Fati7.jpg">
+
+<img src="images/Fati8.jpg">
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- QUOTES -->
+
+
+<section class="card quotes">
+
+
+<h2>
+✨ Little Quotes
+</h2>
+
+
+<div class="quote">
+
+"Friends make ordinary moments become memories."
+
+</div>
+
+
+<div class="quote">
+
+"Every star in this galaxy represents a beautiful moment."
+
+</div>
+
+
+<div class="quote">
+
+"Keep shining, Fati 💜"
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- MUSIC -->
+
+
+<section id="music" class="card">
+
+<h2>
+🎸 Music Galaxy
+</h2>
+
+
+<div class="vinyl">
+💿
+</div>
+
+
+<audio id="audio" controls>
+
+<source id="songSource" src="music/space.mp3">
+
+</audio>
+
+
+
+<h3>
+Playlist 🌙
+</h3>
+
+
+<div class="playlist">
+
+
+<button onclick="changeSong('music/space.mp3')">
+🌌 Space between by evie and mal
+</button>
+
+
+<button onclick="changeSong('music/nothing.mp3')">
+🖤 Nothing else matters by metallica
+</button>
+
+
+</div>
+
+
+
+<br>
+
+
+<button onclick="playMusic()">
+▶ Play
+</button>
+
+
+<button onclick="pauseMusic()">
+⏸ Pause
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- TIMELINE -->
+
+
+<section class="card">
+
+
+<h2>
+⏳ Our Timeline
+</h2>
+
+
+
+<div class="timeline">
+
+
+<article>
+
+<h3>
+🌌 Chapter 1
+</h3>
+
+<p>
+The beginning of unforgettable memories.
+</p>
+
+</article>
+
+
+
+
+<article>
+
+<h3>
+💜 Chapter 2
+</h3>
+
+<p>
+The funny moments and inside jokes.
+</p>
+
+</article>
+
+
+
+
+<article>
+
+<h3>
+⭐ Chapter 3
+</h3>
+
+<p>
+More adventures waiting.
+</p>
+
+</article>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- FAVORITES -->
+
+
+<section class="card">
+
+
+<h2>
+🖤 Fati's Universe
+</h2>
+
+
+<ul>
+
+<li>🎵 Favorite songs</li>
+
+<li>🎬 tea</li>
+
+<li>🎨 certified divas</li>
+
+<li>🌙 Personal memories</li>
+
+</ul>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- SECRET -->
+
+
+<section id="secret" class="secret">
+
+
+<h2>
+🔒 Hidden Galaxy
+</h2>
+
+
+<p>
+A secret message is waiting...
+</p>
+
+
+<a href="secret/secret.html">
+
+<button>
+Unlock 💜
+</button>
+
+</a>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<footer>
+
+
+<h3>
+FATI WORLD 🌙
+</h3>
+
+
+<p>
+Created with love and memories 💜
+</p>
+
+
+</footer>
+
+
+
+
+</main>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

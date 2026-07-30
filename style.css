@@ -1,0 +1,786 @@
+/* =====================================
+        FATI WORLD 🌙💜
+        GALAXY STYLE
+===================================== */
+
+
+*{
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    margin:0;
+    min-height:100vh;
+
+    font-family:
+    "Courier New",
+    monospace;
+
+    color:white;
+
+    background:
+    radial-gradient(circle at top,
+    #6610a8,
+    #090014 45%,
+    #020005);
+
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* =====================================
+        BACKGROUND
+===================================== */
+
+
+.stars{
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+
+    background-size:
+    80px 80px;
+
+    animation:
+    starsMove 25s linear infinite;
+
+    opacity:.35;
+
+    z-index:-3;
+
+}
+
+
+
+.nebula{
+
+    position:fixed;
+
+    width:800px;
+    height:800px;
+
+    background:
+    radial-gradient(circle,
+    rgba(170,0,255,.35),
+    transparent 65%);
+
+    top:-300px;
+    left:-200px;
+
+    filter:blur(50px);
+
+    z-index:-2;
+
+}
+
+
+
+.moon{
+
+    position:fixed;
+
+    right:40px;
+    top:40px;
+
+    font-size:70px;
+
+    animation:
+    float 4s ease-in-out infinite;
+
+}
+
+
+
+
+
+
+@keyframes starsMove{
+
+from{
+    background-position:0 0;
+}
+
+to{
+    background-position:
+    400px 800px;
+}
+
+}
+
+
+
+@keyframes float{
+
+50%{
+    transform:translateY(-20px);
+}
+
+}
+
+
+
+
+
+
+
+/* =====================================
+        INTRO
+===================================== */
+
+
+.intro{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050008;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:20;
+
+}
+
+
+
+.cd{
+
+    font-size:80px;
+
+    animation:
+    spin 3s linear infinite;
+
+}
+
+
+
+.intro h1{
+
+    font-size:55px;
+
+    color:#d66bff;
+
+    text-shadow:
+    0 0 20px #b026ff;
+
+}
+
+
+
+.loading{
+
+    width:300px;
+
+    height:15px;
+
+    border:2px solid white;
+
+}
+
+
+
+#bar{
+
+    height:100%;
+
+    width:0%;
+
+    background:#b026ff;
+
+}
+
+
+
+
+
+@keyframes spin{
+
+to{
+    transform:rotate(360deg);
+}
+
+}
+
+
+
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+        NAV
+===================================== */
+
+
+nav{
+
+    position:sticky;
+
+    top:0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+    background:
+    rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:
+    1px solid #7b00ff;
+
+    z-index:10;
+
+}
+
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:15px;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:#d66bff;
+
+    text-shadow:
+    0 0 15px purple;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+        HERO
+===================================== */
+
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+
+
+.hero h1{
+
+    font-size:60px;
+
+}
+
+
+
+.glitch{
+
+    animation:
+    glitch 2s infinite;
+
+}
+
+
+
+@keyframes glitch{
+
+0%,100%{
+transform:none;
+}
+
+50%{
+transform:translateX(3px);
+}
+
+}
+
+
+
+
+
+button{
+
+    background:
+    transparent;
+
+    color:white;
+
+    border:
+    2px solid #b026ff;
+
+    padding:12px 30px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    background:#b026ff;
+
+    box-shadow:
+    0 0 25px #b026ff;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+        CARDS
+===================================== */
+
+
+.card{
+
+    width:85%;
+
+    margin:60px auto;
+
+    padding:40px;
+
+    background:
+    rgba(20,0,35,.65);
+
+    border:
+    1px solid rgba(180,0,255,.5);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 0 30px rgba(160,0,255,.25);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+.card h2{
+
+    text-align:center;
+
+    color:#e1a0ff;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+        GALLERY
+===================================== */
+
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.gallery img{
+
+    width:100%;
+
+    border-radius:15px;
+
+    border:
+    3px solid #7b00ff;
+
+    transition:.5s;
+
+}
+
+
+
+.gallery img:hover{
+
+    transform:
+    scale(1.08)
+    rotate(3deg);
+
+    box-shadow:
+    0 0 30px purple;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+        INFO
+===================================== */
+
+
+.info{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    text-align:center;
+
+    font-size:22px;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+        MUSIC
+===================================== */
+
+
+.vinyl{
+
+    text-align:center;
+
+    font-size:90px;
+
+    animation:
+    spin 4s linear infinite;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+        TIMELINE
+===================================== */
+
+
+.timeline article{
+
+    margin:30px;
+
+    padding:20px;
+
+    border-left:
+    3px solid purple;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+        QUOTES
+===================================== */
+
+
+.quote{
+
+    margin:20px;
+
+    padding:20px;
+
+    text-align:center;
+
+    font-style:italic;
+
+    background:
+    rgba(255,255,255,.05);
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+        SECRET
+===================================== */
+
+
+.secret{
+
+    text-align:center;
+
+    margin:100px auto;
+
+}
+
+
+
+
+
+
+
+
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#d6a0ff;
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:700px){
+
+nav{
+
+flex-direction:column;
+
+}
+
+
+.hero h1{
+
+font-size:35px;
+
+}
+
+
+.card{
+
+width:95%;
+
+}
+
+
+.info{
+
+flex-direction:column;
+
+}
+
+}
+.secret-page{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+
+#lock,
+#secretContent{
+
+background:
+rgba(20,0,35,.8);
+
+padding:40px;
+
+border-radius:25px;
+
+border:1px solid purple;
+
+box-shadow:
+0 0 30px purple;
+
+}
+
+
+
+input{
+
+padding:15px;
+
+border-radius:20px;
+
+border:none;
+
+margin:20px;
+
+font-size:18px;
+
+}
+
+
+
+.secret-photo{
+
+width:300px;
+
+max-width:90%;
+
+border-radius:20px;
+
+border:3px solid purple;
+
+box-shadow:
+0 0 30px purple;
+
+}
+#siteLock{
+
+position:fixed;
+
+inset:0;
+
+background:
+radial-gradient(circle,#4b0070,#050008);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+
+.lock-box{
+
+text-align:center;
+
+background:
+rgba(20,0,35,.9);
+
+padding:40px;
+
+border-radius:25px;
+
+border:2px solid purple;
+
+box-shadow:
+0 0 40px purple;
+
+}
+
+
+.lock-box input{
+
+padding:15px;
+
+border-radius:20px;
+
+margin:20px;
+
+}
